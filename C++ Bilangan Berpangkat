@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int x, y, i, j, jml[100];  //variabel
+ 
+int pangkat (int x, int y)  //parameter pangkat
+{
+ if (y == 0)  //jika nilai pangkat nol, maka pemanggilan 1 kali
+ {
+  return 1; 
+ }
+ else  //fungsi rekursif
+  {
+   return x * pangkat (x, y - 1);
+  }  
+}
+
+main()
+{
+ printf("================================================================================");
+ printf("----------------------------------Sinau Coding---------------------------------");
+ printf("================================================================================");
+ printf ("Masukan bilangan yang akan dipangkatkan = ");
+ scanf ("%d", &x);  //masukan bilangan bulat
+ printf ("\nMasukan Jumlah Deret Bilangan = ");
+ scanf ("%d", &y);  //masukan bilangan pangkat
+
+ getch ();  
+ for (i = 0; i < y; i++)  //perulangan untuk menyimpan deret hasil pangkat
+
+ {
+  jml[i] = pangkat(x, y - i);  //proses penyimpanan
+ }
+
+ for (j = y - 1; j >= 0; j--)  //proses menampilkan deret pangkat
+ {
+  printf ("%d ",jml[j]);
+ }
+}
