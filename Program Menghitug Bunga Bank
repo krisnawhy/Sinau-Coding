@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std; 
+int main() 
+
+{ 
+float per_hari; 
+float per_tahun; 
+float b; 
+float per_bulan; 
+float bunga; 
+int a; 
+cout << "================================================" << endl; 
+cout << " PROGRAM MENGHITUNG BUNGA BANK" << endl; 
+cout << "================================================" << endl; 
+cout << "Masukkan jumlah tabungan anda: Rp"; 
+cin >> a; 
+cout << endl; 
+cout << "Masukkan besar suku bunga (%): "; 
+cin >> b; 
+cout << endl << endl; 
+bunga =b/100; 
+per_tahun =bunga*a; 
+per_bulan =bunga*a/12; 
+per_hari =bunga*a/360; 
+cout << "Bunga yang didapat dalam satu tahun adalah Rp" << per_tahun << endl; 
+cout << "Bunga yang didapat dalam satu bulan adalah Rp" << per_bulan << endl; 
+cout << "Bunga yang didapat dalam satu hari adalah Rp" << per_hari<< endl; 
+return 0;
+}
+
