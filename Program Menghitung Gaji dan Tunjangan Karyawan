@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+ char nip[20],nama[50], jk[10];
+ int gaji,gol,status,tjgMenikah,jmlhAnak,tjgAnak;
+ 
+ cout<<"NAMA             = ";cin.getline(nama,50);
+ cout<<"NIP              = ";cin>>nip;
+ cout<<"GOLONGAN [1/2/3] = ";cin>>gol;
+ cout<<"JENIS KELAMIN    = ";cin>>jk;
+ cout<<"STATUS[1/0]      = ";cin>>status;
+ cout<<"JUMLAH ANAK      = ";cin>>jmlhAnak;
+ 
+ cout<<"=================OUTOUT=================="<<endl;
+ 
+ cout<<"NIP              = "<<nip<<endl;
+ cout<<"NAMA             = "<<nama<<endl;
+ cout<<"GOLONGAN         = "<<gol<<endl;
+ cout<<"JENIS KELAMIN    = "<<jk<<endl;
+ cout<<"STATUS           = "<<status<<endl;
+ cout<<"JUMLAH ANAK      = "<<jmlhAnak<<endl;
+ switch(gol){
+case 1:
+ gaji = 3000000;
+ break;
+case 2:
+ gaji = 4000000;
+ break;
+case 3:
+  gaji = 5000000;
+ break;
+default:
+  gaji = 0;
+   }cout<<"Gaji Pokok        = Rp."<<gaji<<endl;
+  
+switch(status){
+case 1:
+tjgMenikah=250000;
+ switch (jmlhAnak){
+ case 1 : case 2: case 3:
+ {tjgAnak=jmlhAnak*200000;}
+  break;
+  default:
+ {tjgAnak=0;}
+}
+break;  
+default:
+ tjgMenikah=0;
+}
+ cout<<"Tunjangan Menikah = Rp. "<<tjgMenikah<<endl;
+ cout<<"Tunjangan Anak    = Rp. "<<tjgAnak<<endl;
+ cout<<"Total Gaji        = Rp."<<gaji+tjgMenikah+tjgAnak;
+  
+ return 0;
+}
