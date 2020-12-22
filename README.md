@@ -1,2 +1,5 @@
 # Sinau-Coding
-Belajar Programming
+Belajar Programming :
+C ++
+Python
+Java Script
